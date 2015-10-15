@@ -10,7 +10,9 @@ $app = new \Slim\Slim();
  * - ingredients
  * - creator
  *
- * Your task: see TODOs and make this work and make it better. Do this whatever you like (classes, libs etc) , but the storage method must be file based (as it is now)
+ * Your task: see TODOs and make this work (and make it better). Do this however you like (classes, libs etc)
+ * but the storage method must be file based (as it is now).
+ * 
  * Keep it simple but elegant!
  */
 
@@ -27,7 +29,7 @@ $app->get('/recipes/:name', function ($name) {
 $app->post('/recipes/add', function () {
 
 	// TODO: wait, this just overwrites all recipes everytime.. Make better (and also safer..)!
-    file_put_contents('recipes.txt', implode(";", [
+	file_put_contents('recipes.txt', implode(";", [
     	'name' => $_POST['name'],
     	'ingredients' => $_POST['ingredients'],
     	'creator' => $_POST['creator']
