@@ -1,0 +1,5 @@
+AddHandler php5-fcgi-55 .php
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
