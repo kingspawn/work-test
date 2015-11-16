@@ -13,16 +13,14 @@
 	<?php if ($recipe) { ?>
 	<div>
 		<p>Name: <?php echo htmlentities($recipe->name, ENT_COMPAT, 'utf-8'); ?></p>
-		<p>
-			Ingredients
-			<ul>
-				<?php
-					foreach($recipe->ingredients as $ingredient) {
-						echo '<li>'.htmlentities($ingredient, ENT_COMPAT, 'utf-8').'</li>';
-					}
-				?>
-			</ul>
-		</p>		
+		<p>Ingredients</p>
+		<ul>
+			<?php
+				foreach($recipe->ingredients as $ingredient) {
+					echo '<li>'.htmlentities($ingredient, ENT_COMPAT, 'utf-8').'</li>';
+				}
+			?>
+		</ul>
 		<p>Created by: <?php echo htmlentities($recipe->creator, ENT_COMPAT, 'utf-8'); ?></p>
 	</div>
 	<?php } else { ?>

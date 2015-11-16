@@ -18,7 +18,7 @@
 	}
 	label span {
 		display: inline-block;
-		width: 15em;
+		width: 20em;
 	}
   </style>
 </head>

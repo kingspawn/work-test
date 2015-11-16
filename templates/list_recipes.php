@@ -16,6 +16,7 @@
 				<th>Recipe name</th>
 				<th>Ingedient(s)</th>
 				<th>Created by</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -26,7 +27,7 @@
 					<td><?php echo htmlentities($recipe->name, ENT_COMPAT, 'utf-8'); ?></td>
 					<td><?php echo htmlentities(implode(', ', $recipe->ingredients), ENT_COMPAT, 'utf-8'); ?></td>
 					<td><?php echo htmlentities($recipe->creator, ENT_COMPAT, 'utf-8'); ?></td>
-					<td><a href="/recipes/<?php echo htmlentities($recipe->name, ENT_COMPAT, 'utf-8'); ?>">View</a></td>
+					<td><a href="/recipes/<?php echo urlencode($recipe->name); ?>">View</a></td>
 				</tr>			
 			<?php
 				}
